@@ -1,5 +1,7 @@
 # virtuoso
-*Play the virtual piano with ease.*
+<p align="center">
+    *Play the virtual piano with ease.*
+</p>
 
 ## What is this?
 This project was meant to make playing the [virtual piano](https://virtualpiano.net) easier. At it's core, it's a program that helps you type a preset set of characters, but it follows the rules of virtual piano notes. This project does not condone the use of this program for virtual piano contests, competitions, or similar events; it's meant to be a fun tool used for entertainment.
