@@ -48,7 +48,7 @@ class Player:
     """
     def parse_file(self, filename):
         with open(filename) as f:
-            return self.parse_notes(f.readlines());
+            return self.parse_notes(f.read());
     
 
     """
@@ -93,6 +93,6 @@ class Player:
         if (notes):
             self.notes = self.parse_notes(notes);
         elif (filename):
-            self.notes = self.parse_file(notes);
+            self.notes = self.parse_file(filename);
         
         self.current_note = 0 if (len(self.notes) > 0) else -1;

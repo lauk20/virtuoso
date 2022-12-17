@@ -9,8 +9,8 @@ Or by directing modifying the code:
     Player(filename = "./song_name.txt") will take in "./song_name.txt" as the file.
 """
 def main():
-    if (len(sys.argv) >= 3):
-        player = Player(sys.argv[2]);
+    if (len(sys.argv) >= 2):
+        player = Player(filename = sys.argv[1]);
         player.listen();
     else:
         print("Usage: python main.py <filename>");
