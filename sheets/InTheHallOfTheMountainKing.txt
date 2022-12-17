@@ -1,0 +1,16 @@
+[a 7 9 Q S] d f [QG7] d G|[qg*] S g|[f80] s f|
+[a 7 9 Q S] d f [QG7] d G k [j9] G [ed] G [j9]|e|
+[a 7 9 Q S] d f [QG7] d G|[qg*] S g|[f80] s f|
+[a 7 9 Q S] d f [QG7] d G k [j9] G [ed] S [a7]||
+7 * [9$] 0 [Q7] 9 [Q$]|[q7] * [q$]|[70] 8 [0$]|
+7 * [9$] 0 [Q7] 9 [Q$] r [e2] Q [96] Q [e2]|6|
+7 * [9$] 0 [Q7] 9 [Q$]|[q7] * [q$]|[70] 8 [0$]|
+7 * [9$] 0 [Q7] 9 [Q$] r [e2] Q [96] Q [e2]|6|
+[Q$] W [E*] r [T$] E [T*]|[y2] E [y9]|[T$] E [T*]|
+[Q$] W [E*] r [T$] E [T*]|[y2] E [y^]|[T$]|*|
+[Q$] W [E*] r [T$] E [T*]|[y2] E [y9]|[T$] E [T*]|
+[Q$] W [E*] r [T$] E [T*]|[y2] E [y^]|[T$]|*|
+[r7] T [y$] u [I7] y [I$]|[i7] T [i$]|[u7] t [u$]|
+[r7] T [y$] u [I7] y [I$] a [p2] I [y6] I [p2]|6|
+[r7] T [y$] u [I7] y [I$]|[i7] T [i$]|[u7] t [u$]|
+[r5] T [y7] u [I$] y [I7] a [P$] I [P*] S [a7]|[yaI7]
