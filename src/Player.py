@@ -21,6 +21,8 @@ class Player:
         notes = notes.replace("-", "");
         notes = notes.replace("[", " [");
         notes = notes.replace("]", "] ");
+        notes = notes.replace("{", " [");
+        notes = notes.replace("}", " }");
 
         # split the notes by spaces
         chords = notes.split();
