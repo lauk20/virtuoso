@@ -34,6 +34,21 @@ class Player:
                     result.append(c);
 
         return result;
+
+
+    """
+    Method to parse the file into list of chords/notes.
+    Uses self.parse_notes method once file is read.
+
+    Args:
+        filename: Name of the file (or the relative path to it);
+        
+    Returns:
+        List of strings that represent individual chords/notes.
+    """
+    def parse_file(self, filename):
+        with open(filename) as f:
+            return self.parse_notes(f.readlines());
     
 
     """
@@ -74,6 +89,10 @@ class Player:
     Args:
         notes: The string containing the virtual piano notes.
     """
-    def __init__(self, notes):
-        self.notes = self.parse_notes(notes);
+    def __init__(self, notes = None, filename = None):
+        if (notes):
+            self.notes = self.parse_notes(notes);
+        elif (filename):
+            self.notes = self.parse_file(notes);
+        
         self.current_note = 0 if (len(self.notes) > 0) else -1;

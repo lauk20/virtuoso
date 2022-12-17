@@ -1,8 +1,19 @@
 from Player import Player
+import sys
 
+"""
+Main entry into program.
+Run by using: python main.py [filename].
+Or by directing modifying the code:
+    Player("abcde") will take in "abcde" as the notes.
+    Player(filename = "./song_name.txt") will take in "./song_name.txt" as the file.
+"""
 def main():
-    player = Player("abcde");
-    player.listen();
+    if (len(sys.argv) >= 3):
+        player = Player(sys.argv[2]);
+        player.listen();
+    else:
+        print("Usage: python main.py <filename>");
 
 if __name__ == "__main__":
     main();
