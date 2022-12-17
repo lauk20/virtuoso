@@ -12,6 +12,7 @@
 
 This project was meant to make playing the [virtual piano](https://virtualpiano.net) easier. At it's core, it's a program that helps you type a preset set of characters, but it follows the rules of virtual piano notes. This project does not condone the use of this program for virtual piano contests, competitions, or similar events; it's meant to be a fun tool used for entertainment.
 
+Unlike many of those found online, which play the entire song automatically, this one plays a chord/note when the "." key is pressed.
   
 
 ## How do I run it?
@@ -34,7 +35,7 @@ pip install pyautogui
 
   
 
-Once you have these modules installed, you can run the ```main.py``` which is in the ```src``` directory. The command should be ```python main.py <filename>``` where filename is the path to your input file (your music sheets).
+Once you have these modules installed, you can run the ```main.py``` which is in the ```src``` directory. The command should be ```python main.py <filename>``` where filename is the path to your input file (your music sheets). Once the program is running, press the "." key to play the next chord/note.
 
   
 
