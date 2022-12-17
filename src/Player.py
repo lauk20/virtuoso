@@ -18,6 +18,7 @@ class Player:
     def parse_notes(self, notes):
         # making sure the string is spaced out properly
         notes = notes.replace("|", "");
+        notes = notes.replace("-", "");
         notes = notes.replace("[", " [");
         notes = notes.replace("]", "] ");
 
