@@ -20,11 +20,15 @@ You need two Python modules to make it work: pynput and PyAutoGUI. To install fo
 
 1. Install pynput
 
-```pip install pynput```
+```
+pip install pynput
+```
 
 2. Install PyAutoGUI
 
-```pip install pyautogui```
+```
+pip install pyautogui
+```
 
 *You need to have pip installed*
 
