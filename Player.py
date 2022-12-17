@@ -1,5 +1,5 @@
-from pynput.keyboard import Key, Listener, Controller, KeyCode
-keyboard = Controller();
+from pynput.keyboard import Key, Listener, KeyCode
+import pyautogui
 
 """
 Player class to represent a piano Player!
@@ -16,22 +16,55 @@ class Player:
         List of strings that represent individual chords/notes.
     """
     def parse_notes(self, notes):
+        # making sure the string is spaced out properly
         notes = notes.replace("|", "");
+        notes = notes.replace("[", " [");
+        notes = notes.replace("]", "] ");
+
+        # split the notes by spaces
         chords = notes.split();
-        print(chords);
 
-        return chords;
+        # cleaning the chords, since some notes are strung together like this "abcd" but should not be a chord
+        result = [];
+        for chord in chords:
+            if ("[" in chord or "]" in chord):
+                result.append(chord.replace("[", "").replace("]", ""));
+            else:
+                for c in chord:
+                    result.append(c);
+
+        return result;
     
 
-    def on_press(key):
-        #if (keyboard.KeyCode.from_char(key) )
-        if (key == KeyCode.from_char(".")):
-            print("Triggered");
-            keyboard.type("wty");
+    """
+    Called when a key is pressed and plays the following note.
 
+    Args:
+        key: The key that was pressed
     
+    Returns:
+        False if self.current_note is pointing out of bounds or if Esc was pressed.
+        None otherwise.
+    """
+    def on_press(self, key):
+        if (self.current_note == -1 or self.current_note >= len(self.notes)): # if the pointer is out of bounds we end
+            return False;
+        
+        if (key == KeyCode.from_char(".")): # if is the keybind then play the note/chord
+            pyautogui.write(self.notes[self.current_note]);
+            self.current_note = self.current_note + 1;
+        elif (key == KeyCode.from_char("/")): # if is slash then we want to restart the song
+            self.current_note = 0;
+        elif (key == Key.esc): # we don't want to play anymore
+            return False;
+
+
+    """
+    Method to start listening to keyboard inputs, using self.on_press as the on_press function.
+    """
     def listen(self):
-        with Listener(on_press=on_press, on_release=on_release) as listener:
+        # start listening using pynput
+        with Listener(on_press=self.on_press) as listener:
             listener.join();
     
 
@@ -43,3 +76,4 @@ class Player:
     """
     def __init__(self, notes):
         self.notes = self.parse_notes(notes);
+        self.current_note = 0 if (len(self.notes) > 0) else -1;
